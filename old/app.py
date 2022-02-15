@@ -3,9 +3,10 @@ import json
 
 app = Flask(__name__)
 
-@app.route('/')
-def hello_world():
-    return 'Hello, World!'
+@app.route('/metrics')
+def metric():
+    return 'met'
+
 
 @app.route('/temperatur',methods=['GET','POST'])
 def hello_temp():
@@ -32,4 +33,4 @@ def hello_temp():
 
 
 if __name__ == '__main__':
-    app.run(port=5000)
+    app.run(port=7999)
